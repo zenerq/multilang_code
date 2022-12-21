@@ -11,14 +11,9 @@ st.markdown(
     .container {
         display: flex;
     }
-    .logo-text {
-        font-weight:700 !important;
-        font-size:50px !important;
-        color: #ffffff !important;
-        padding-top: 75px !important;
-    }
     .logo-img {
         float:right;
+	margin:auto;
     }
     </style>
     """,
@@ -29,14 +24,13 @@ st.markdown(
     f"""
     <div class="container">
         <img class="logo-img" src="data:image/png;base64,{pybase64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">
-        <p class="logo-text">What are you looking for?</p>
     </div>
     """,
     unsafe_allow_html=True
 )
 
 
-st.header("Code Solution generator in different languages") 
+st.header("Code Translate Generator in different languages") 
 language_option = st.selectbox(
     'In which language do you want your code solution?',
     ('Python', 'Java', 'C++','Javascript','Go','Ruby'))
